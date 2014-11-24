@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html data-ng-app="app">
+<head>
+    <title>AngularJS - ng-repeat + filter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" />
+</head>
+<body>
+    <div data-ng-controller="defaultCtrl">
+        <input data-ng-model="text" class="form-control" placeholder="Type in here" />  
+         <table class="table">
+            <thead>
+                <tr>
+                    <th>Mountain</th>
+                    <th>Metres</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="mountain in mountainsList | filter:text">
+                    <td>{{mountain.mountain}}</td>
+                    <td>{{mountain.metres}}</td>
+                    <td>{{mountain.country}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.angularjs.org/1.3.0/angular.js"></script>
+    <script>
+
+        var app = angular.module('app', []);
+
+        app.controller('defaultCtrl', function ($scope) {
+            $scope.mountainsList = [
+            { mountain: "Mount Everest", metres: 8850, country: 'Nepal-China' }, 
+            { mountain: "K2", metres: 8611, country: 'Pakistan-China' },
+            { mountain: "Kangczendzonga", metres: 8598, country: 'Nepal-India' }, 
+            { mountain: "Lhotse", metres: 8501, country: 'Nepal-China' },
+            { mountain: "Makalu", metres: 8463, country: 'Nepal-China' }
+            ];
+        });
+    </script>
+</body>
+</html> 

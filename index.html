@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>WarsawJS Presentation Template</title>
+    <title>WarsawJS AngularJS #1</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=792, user-scalable=no">
@@ -12,8 +12,8 @@
 </head>
 <body class="list">
     <header class="caption">
-        <h1>WarsawJS Presentation Template</h1>
-        <p>We talk about JavaScript. Each month in Warsaw, Poland.</p>
+        <h1>WarsawJS</h1>
+        <p>AngularJS #1</p>
     </header>
 
     <section class="slide front-page">
@@ -22,93 +22,403 @@
                 <img src="themes/warsawjs/pictures/logo.png">
             </div>
             <div class="content">
-                <h2>WarsawJS Presentation Template</h2>
-                <p>Author Name <a href="http://twitter.com/author">@author</a>
+                <h2>AngularJS #1</h2>
+                <p>Dariusz Kalbarczyk</p>
+                <p>Arkadiusz Kalbarczyk</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide  ">
+        <div>
+            <div class="logo">
+                <img src="img/book_300.jpg" />
+            </div>
+            <div class="content">
+                <p>Premiera książki, pierwszy kwartał 2015</p>
             </div>
         </div>
     </section>
 
     <section class="slide">
         <div>
-            <h2>Plain Text on Your Slides</h2>
-
-            <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco
-                laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in
-                reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.
-            </p>
-        </div>
-    </section>
-
-    <section class="slide">
-        <div>
-            <h2>All Kind of Lists</h2>
+            <h2>Agenda</h2>
             <ol>
-                <li>Simple lists are marked with bullets</li>
-                <li>Ordered lists begin with a number</li>
-                <li>You can even nest lists one inside another
-                    <ul>
-                        <li>Or mix their types</li>
-                        <li>But do not go too far</li>
-                        <li>Otherwise audience will be bored</li>
-                    </ul>
-                </li>
-                <li>Look, seven rows exactly!</li>
+                <li>Co to jest AngularJS?</li>
+                <li>Od czego zacząć?</li>
+                <li>Dyrektywy i data binding</li>
+                <li>Pierwsza aplikacja</li>
+                <li>$scope</li>
+                <li>Routing</li>
+                <li>Komunikacja z serwerem</li>
             </ol>
         </div>
     </section>
 
     <section class="slide">
         <div>
-            <h2>JavaScript Samples</h2>
-            <pre>
-                <code><mark class="comment">// Crockford style IIFE</mark></code>
-                <code>(function () {</code>
-                <code>  var <mark>someVar</mark> = 'value';</code>
-                <code>  console.<mark class="important">log</mark>(someVar);</code>
-                <code>}());</code>
-            </pre>
+            <img src="img/angularjs.jpg" />
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <img src="img/wow.jpg" />
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Co to jest AngularJS?</h2>
+            <p>
+                <strong>AngularJS</strong> - otwarta biblioteka języka JavaScript, wspierana i firmowana przez <strong>Google</strong>,
+                wspomagająca tworzenie i rozwój aplikacji SPA (Single Page Application).
+                Umożliwia wdrożenie wzorca MVC (Model-View-Controller). Jedną z rzeczy, 
+                którą od razu wyróżnia jest to, że posiada własny kompilator HTML, przez możemy nauczyć go (html-a) nowych sztuczek.
+            </p>
+        </div>
+    </section>
+
+
+
+    
+    <section class="slide">
+        <div>
+            <h2>Od czego zacząć?</h2>
+            <ol>
+                <li><a href="https://angularjs.org/" target="_blank">angularjs.org</a></li>
+                <li><a href="https://www.youtube.com/user/angularjs" target="_blank">youtube.com/user/angularjs</a></li>
+                <li><a href="https://gist.github.com/kalbarczyk/" target="_blank">gist.github.com/kalbarczyk</a></li>
+                <li><a href="http://www.meetup.com/AngularJS-Warsaw/" target="_blank">meetup.com/AngularJS-Warsaw</a></li>
+                <li><a href="http://ng-poland.pl/" target="_blank">ng-poland.pl</a></li>
+            </ol>
+        </div>
+    </section>
+
+
+    <section class="slide">
+        <div>
+            <img src="img/download.jpg" />
         </div>
     </section>
     <section class="slide">
         <div>
-            <h2>Even Tables</h2>
-            <table>
-                <tr>
-                    <th scope="col">Locavore</th>
-                    <th>Umami</th>
-                    <th>Helvetica</th>
-                    <th>Vegan</th>
-                </tr>
-                <tr>
-                    <th scope="row">Fingerstache</th>
-                    <td>Kale</td>
-                    <td>Chips</td>
-                    <td>Keytar</td>
-                </tr>
-                <tr>
-                    <th scope="row">Sriracha</th>
-                    <td>Gluten-free</td>
-                    <td>Ennui</td>
-                    <td>Keffiyeh</td>
-                </tr>
-                <tr>
-                    <th scope="row">Thundercats</th>
-                    <td>Jean</td>
-                    <td>Shorts</td>
-                    <td>Biodiesel</td>
-                </tr>
-                <tr>
-                    <th scope="row">Terry</th>
-                    <td>Richardson</td>
-                    <td>Swag</td>
-                    <td>Blog</td>
-                </tr>
-            </table>
-            <p>It’s good to have information organized.</p>
+            <img src="img/download2.jpg" />
         </div>
     </section>
+    <section class="slide">
+        <div>
+            <img src="img/download3.jpg" />
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Dyrektywy i data binding</h2>
+            <pre>
+            <mark class="important">ng-app</mark>
+            <mark class="important">ng-controller</mark>
+            <mark class="important">ng-model</mark>
+            <mark class="important">ng-repeat</mark>
+            <mark class="important">ng-show</mark>
+            <mark>...</mark>
+            </pre>
+            <img src="img/ng-800.jpg" />
+
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <img src="img/data_binding.jpg" />
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Two way data binding</h2>
+            <p>Zmiany w widoku są <strong>natychmiast</strong> odzwierciedlane w modelu(kontrolerze), 
+            analogicznie zmiany w modelu są w czasie rzeczywistym  widoczne w widoku.</p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Pierwsza aplikacja</h2>
+            <pre>
+                <code>&lt;!doctype html&gt;</code>
+                <code>&lt;html <mark class="important">ng-app</mark>  &gt;</code>
+                <code>&lt;body&gt;</code>
+                <code>&lt;input <mark class="important">ng-model="text"</mark> /&gt;</code>  
+                <code><mark class="important">{{text}}</mark></code>   
+                <code>&lt;script src="<mark class="important">angular.js</mark>"&gt; &lt;/script&gt;</code>
+                <code>&lt;/body&gt;</code>
+                <code>&lt;/html&gt;</code> 
+            </pre>
+        </div>
+    </section>
+
+
+
+    <section class="slide">
+        <div>
+            <h2>Demo 1 - Pierwsza aplikacja</h2>
+            <p>Kod do pobrania z GitHub</p>
+            <p>
+                <a href="https://gist.github.com/kalbarczyk/0481f5ddd1aa2538d96b" target="_blank">https://gist.github.com/kalbarczyk/0481f5ddd1aa2538d96b</a>
+            </p>
+       </div>
+    </section>
+
+
+    <section class="slide">
+        <div>
+            <h2>Moduł & Kontroler</h2>
+            <pre>
+            <code><mark class="comment">// Tworzymy moduł (kontener, namespace, pojemnik)</mark></code>
+            <code>var app = angular.<mark class="important">module</mark>(<mark>'app'</mark>, []);</code>
+            <code><mark class="comment">//  Tworzymy kontroler (JavaScript constructor function )</mark></code>
+            <code>app.<mark class="important">controller</mark>(<mark>'defaultCtrl'</mark>, function (<mark class="important">$scope</mark>) {</code>
+                <code>...</code>
+            <code>});</code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Co warto wiedzieć o kontrolerach?</h2>
+            <p>
+                <strong> Użyj kontrolera do:</strong><br />
+                - Zainicjowania stanu obiektu <em>$scope</em> <br />
+                 - Rozszerzenia obiektu <em>$scope</em><br />
+            </p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Co warto wiedzieć o kontrolerach?</h2>
+            <p>
+                <strong> Nie używaj kontrolera do:</strong><br />
+                - Manipulowanie drzewem DOM - kontrolery nie powinny zawierac rozbudowanej logiki. Wykorzystuj do tego potęgę dyrektyw.<br />
+                - Formatowania – użyj izolowanych kontrolek<br />
+                - Filtrowania – użyj izolowanych filtrów<br />
+                - Współdzielenia kodu – użyj izolowanych serwisów
+            </p>
+        </div>
+    </section>
+
+
+   
+
+    <section class="slide">
+        <div>
+            <h2>$scope</h2>
+            <ol>
+                <li> Czym jest $Scope?</li>
+                <li> Dziedziczenie</li>
+                <li> Mechanika $Scope</li>
+            </ol>
+        </div>
+    </section>
+	
+	
+	<section class="slide">
+        <div>
+            <h2> Zadania $scope</h2>
+            <div>				
+				<ol>
+					<li> Komunikacja danych pomiędzy Widokiem (HTML) a Modelem </li>
+					<li> Nasłuchiwanie zmian <strong>-</strong> $swatch(), 2way data binding</li>
+					<li>$digest() oraz $apply()</li>
+				</ol>
+			</div>
+        </div>
+    </section>
+
+	
+	
+	<section class="slide">
+        <div>
+            <h2> Zadania $scope - komunikacja widok/kontroler #1</h2>
+            <pre>				
+		  	<code>	app.controller('defaultCtrl', function(<mark class='important'>$scope</mark>) { </code>
+            <code>       <mark class='important'> $scope.mountain  </mark>="Mount Everest";         </code>
+            <code>          ...                                                                     </code>
+            <code>});                                                                               </code>
+			</pre>
+        </div>
+    </section>
+
+
+    <section class="slide">
+        <div>
+            <h2> Zadania $scope - komunikacja widok/kontroler #2</h2>
+            <pre>               
+                    <code> &lt;div ng-controller="defaultCtrl"&gt;</code>
+                    <code>      {{ mountain }}   &lt;input <mark class='important'>ng-model="mountain" </mark> /&gt;</code>
+                    <code> &lt;/div>                        
+            </pre>
+        </div>
+    </section>
+	
+	
+	<section class="slide">
+        <div>
+            <h2> Zadania $scope - nasłuchiwanie oraz propagacja </h2>
+            	
+                <pre>			
+				 <code><mark class="comment">Implicit watcher </mark></code>
+				 <code><mark class="important">{{ watchedElement }} </mark></code>
+				 
+                
+                <code><mark class="comment">Explicit watcher </mark></code>
+                <code><mark >$watch</mark>(<mark class="important">‘watchedElement’</mark> , function(newValue, oldValue) {</code>
+                <code><mark class="comment">         //functions body… </mark> </code>
+                <code>        });</code>
+                </pre>
+			
+        </div>
+    </section>	
+	
+	<section class="slide">
+        <div>
+            <h2> $digest() oraz $apply()</h2>
+            <div>
+				<ol>
+					<li>Cykl $digest() iteruje po liście nasłuchiwaczy wypatrując zmian</li>
+					<li>$apply() służy do integracji Angulara z innymi frameworkami bądź bibliotekami</li>
+				</ol>
+			</div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>ngRepeat & filtr</h2>
+            <pre>
+                <code> &lt;body ng-init="<mark>items=['a','b','c','d']</mark>"&gt;</code>
+                <code> &lt;input ng-model="<mark class="important">text</mark>" /&gt; </code>
+                <code>...</code>
+                <code> &lt;tr <mark class="important">ng-repeat</mark>="<strong>item</strong> in <mark>items</mark> | <mark class="important">filter:text</mark>"&gt;</code>
+                <code> &lt;td&gt;<strong>{{item}}</strong>&lt;/td&gt;</code>
+                <code>...</code>
+           
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Demo 2 - ngRepeat & filter</h2>
+            <p>Kod do pobrania z GitHub</p>
+            <p>
+                <a href="https://gist.github.com/kalbarczyk/58553f4e05e1c66b3e20" target="_blank">https://gist.github.com/kalbarczyk/58553f4e05e1c66b3e20</a>
+            </p>
+        </div>
+    </section>
+    
+    <section class="slide">
+        <div>
+            <h2>Demo 3 - ToDo</h2>
+            <p>Kod do pobrania z GitHub</p>
+            <p>
+                <a href="https://gist.github.com/kalbarczyk/a26f01197b5ab4ffbff7" target="_blank">https://gist.github.com/kalbarczyk/a26f01197b5ab4ffbff7</a>
+            </p>
+        </div>
+    </section>
+
+
+    <section class="slide">
+        <div>
+            <h2>Routing</h2>
+            <pre>
+            <code> &lt;div <mark class="important">ng-view</mark>&gt; &lt;/div &gt;</code>
+            </pre>
+        </div>
+    </section>
+
+
+    <section class="slide">
+        <div>
+            <h2>Konfiguracja</h2>
+            <pre>
+                <code>var app = angular.module('app', <mark class="important">['ngRoute']</mark>);</code>
+                <code>app.<mark>config</mark>(function (<mark class="important">$routeProvider</mark>) { $routeProvider</code>
+                <code>.when("/home", { templateUrl: "home.html" })</code>
+                <code>.when("/a", { templateUrl: "a.html", controller: "aCtrl" })</code>
+                <code>.when("<mark>/a/:id</mark>", { templateUrl: "ab.html", </code>
+                <code>controller: "abCtrl" })</code>
+                <code>.otherwise({ redirectTo: "/home" });</code>
+                <code>});</code>
+            </pre>
+        </div>
+    </section>
+
+
+
+    <section class="slide">
+        <div>
+            <h2>Demo 4 - Routing</h2>
+            <p>Kod do pobrania z GitHub</p>
+            <p>
+                <a href="https://gist.github.com/kalbarczyk/1e5dcd7d8bcd24698eb7" target="_blank">https://gist.github.com/kalbarczyk/1e5dcd7d8bcd24698eb7</a>
+            </p>
+        </div>
+    </section>
+   
+    
+    <section class="slide">
+        <div>
+            <h2>Komunikacja z serwerem</h2>
+            <ol>
+                <li>$http dla XHR oraz JSONP</li>                
+				<li>Obietnice (promises)</li>				
+            </ol>
+        </div>
+    </section>
+	
+	
+	<section class="slide">
+        <div>
+            <h2>Komunikacja z serwerem - $http</h2>            
+			
+            <pre>
+			<code><mark class="important">$http.get</mark>(<mark>'/api/data'</mark>)</code>
+            <code><mark class="important">$http.post</mark>(<mark>'/api/data', data, config</mark>)</code>
+            <code><mark class="important">$http.put</mark>(<mark>'/api/data', data, config</mark>)</code>
+            <code><mark class="important">$http.delete</mark>(<mark>'/api/data', config</mark>)</code>
+            <code><mark class="important">$http.head</mark>(<mark>'/api/data', config</mark>)</code>
+            <code><mark class="important">$http.jsonp</mark>(<mark>'/api/data'</mark>)</code>
+            </pre>
+        </div>
+    </section>
+	
+	
+	<section class="slide">
+        <div>
+            <h2>Komunikacja z serwerem - Obietnice</h2>
+           
+				<pre>
+            <code><mark class="important">$http.get</mark>(<mark>'/api/data'</mark>)</code>
+            <code>     <mark class="important">.success</mark>(function(data, status, headers, config) {</code>
+            <code><mark class="comment">        // co ma sie wydarzyć po pozytywnym rozpatrzeniu   </mark></code>     
+            <code>      })</code>
+            <code>     <mark class="important">.error</mark>(function(data, status, headers, config) {</code>
+            <code><mark class="comment">        //obsługa błędów</mark></code>
+            <code>});</code>
+            </pre>
+            
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <img src="img/dzieki.jpg" />
+        </div>
+    </section>
+
+
 
     <section class="slide cover">
         <div>

@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="app">
+<head>
+    <title>AngularJS - ToDo App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" />
+    <style>
+        .done-true {
+            text-decoration: line-through;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body data-ng-controller="defaultCtrl">
+    <div class="container">
+
+
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">Add task!</h3>
+            </div>
+            <div class="panel-body">
+
+                <form name="f" data-ng-submit="addTodo()">
+                    To do: <textarea class="form-control" name="newTodo" data-ng-model="formData.newTodo" required></textarea>
+                    Type: <select class="form-control" name="type" data-ng-model="formData.type" data-ng-options="value.name for value in categories" required></select>
+                    Estimated time: <select class="form-control" name="estimates" data-ng-model="formData.estimates" data-ng-options="value for value in estimates" required></select><br />
+                    <button class="btn btn-success" data-ng-disabled="f.$invalid">Add <span class="glyphicon glyphicon-ok"></span></button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">To Do List</h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li data-ng-repeat="todo in todos">
+                        <input type="checkbox" data-ng-model="todo.done" title="Mark Complete" />
+                        <span class="done-{{todo.done}}">{{todo.title}}</span> ({{todo.estimates}}h) <span class="glyphicon glyphicon-{{todo.type.gico}} done-{{todo.done}}"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <button class="btn btn-danger" data-ng-click="deleteCompleted()">Delete Completed <span class="glyphicon glyphicon-remove"></span></button>
+                <button class="btn btn-danger" data-ng-click="toggleJson=!toggleJson">Toggle JSON <span class="glyphicon glyphicon-arrow-down"></span></button>
+            </div>
+        </div>
+
+<pre data-ng-show="toggleJson">
+{{todos | json}}
+</pre>
+
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.js"></script>
+
+    <script>
+var app = angular.module("app", []);
+app.controller('defaultCtrl', ['$scope', 'todos', function ($scope, todos) {
+	console.log($scope);
+    $scope.toggleJson = false;
+    $scope.estimates = [0.5, 1, 2, 3, 5, 8];
+    $scope.categories = [
+    { name: 'Personal', 'gico': 'heart' },
+    { name: 'Health', 'gico': 'tint' },
+    { name: 'Learning', 'gico': 'book' },
+    { name: 'Business', 'gico': 'usd' },
+    { name: 'Home', 'gico': 'home' },
+    { name: 'Other', 'gico': 'paperclip' }];
+    $scope.formData = { type: $scope.categories[0], estimates: $scope.estimates[0] };
+    $scope.todos = todos;
+    $scope.addTodo = function () {
+        $scope.todos.push({ 'title': $scope.formData.newTodo, 'done': false, 'type': $scope.formData.type, 'estimates': $scope.formData.estimates });
+        $scope.formData.newTodo = '';
+    };
+    $scope.deleteCompleted = function () {
+        $scope.todos = $scope.todos.filter(function (item) {
+            return !item.done;
+        });
+    };
+}]);
+app.factory('todos', function () {
+    return [
+    {
+        'title': 'Date with Julita', 'done': false, "type": { "name": "Personal", "gico": "heart" }, 'estimates': 6
+    },
+    {
+        'title': 'Gym', 'done': false, "type": { "name": "Health", "gico": "tint" }, 'estimates': 2
+    },
+    {
+        'title': 'AngularJS next step', 'done': false, "type": { "name": "Learning", "gico": "book" }, 'estimates': 4
+    },
+    {
+        'title': 'Meeting with John', 'done': false, "type": { "name": "Business", "gico": "usd" }, 'estimates': 1
+    }
+    ];
+});
+    </script>
+</body>
+</html> 
